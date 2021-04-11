@@ -1,5 +1,5 @@
-New Developer Environment Setup
-===============================
+Developer Environment Setup
+===========================
 
 Install go
 ----------
