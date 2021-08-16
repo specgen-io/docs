@@ -48,3 +48,30 @@ Here's the list of supported meta information fields:
 | name | Name of the specification, should be in [kebab-case](http://wiki.c2.com/?KebabCase) |
 | version | Version of the specification |
 
+## Operations
+
+Operations are defining HTTP requests in `operations` section of spec file. Operations are grouped, groups are used in code generation and normally should bundle together related operations. The operation group name should be in [snake\_case](https://en.wikipedia.org/wiki/Snake_case).
+
+## Models
+
+Models section allows to define custom user types, including dictionaries, enums, etc. Described models can be used in operations where needed just by name of the model.
+
+## Short Form
+
+Most entities are defined in YAML as dictionary. Some entities also support short form definition. Short form allows to define APIs in very compact way. While long form allows to specify all details of the API entities. Short form is better readable by humans.
+
+Compare long and short forms of defining field as an example:
+
+```yaml
+# short form
+field: string = the value     # some field
+
+# long form
+field:
+  type: string
+  default: the value
+  description: some field 
+```
+
+Entities supporting short form are documented accordingly. Descriptions of most entities could be provided in a comment on the same line where key for entity is defined. In the example above `some field` is a description for the `field` specified via comment on the same line as the field key `field`.
+
