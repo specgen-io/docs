@@ -10,3 +10,8 @@
 * [Enum Model](spec/model-enum.md)
 * [Operation](spec/http.md)
 
+## specgen
+
+* [Overview](specgen/overview.md)
+* [Plugins](specgen/plugins.md)
+
