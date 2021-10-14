@@ -13,5 +13,5 @@
 
 * [Overview](specgen/overview.md)
 * [Plugins](specgen/plugins/README.md)
-  * [Sbt Specgen Plugin](specgen/plugins/sbt-specgen-plugin.md)
-  * [Maven Specgen Plugin](specgen/plugins/maven-specgen-plugin.md)
+  * [Sbt](specgen/plugins/sbt.md)
+  * [Maven](specgen/plugins/maven.md)
