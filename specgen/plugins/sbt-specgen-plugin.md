@@ -1,0 +1,2 @@
+# Sbt Specgen Plugin
+
