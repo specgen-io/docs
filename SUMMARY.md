@@ -7,10 +7,9 @@
 * [Format Overview](spec/format.md)
 * [Types](spec/types.md)
 * [Models](spec/models.md)
-* [Http](spec/http.md)
+* [HTTP Endpoints](spec/http.md)
 
 ## specgen
 
 * [Overview](specgen/overview.md)
 * [Plugins](specgen/plugins.md)
-

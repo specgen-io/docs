@@ -17,7 +17,7 @@ spec: 2                      #  Meta information
 name: example
 version: 1
 
-http:                        #  HTTP operations
+http:                        #  HTTP endpoints
   sample:                    #  API
     get_sample:              #  Endpoint
       endpoint: GET /sample
@@ -48,9 +48,9 @@ Here's the list of supported meta information fields:
 | name | Name of the specification, should be in [kebab-case](http://wiki.c2.com/?KebabCase) |
 | version | Version of the specification |
 
-## HTTP
+## HTTP Endpoints
 
-HTTP endpoints are defined in `http` section of the spec. Endpoints are grouped in APIs. APIs are used in code generation and should bundle together related operations. The API name should be in [snake_case](https://en.wikipedia.org/wiki/Snake_case).
+HTTP endpoints are defined in `http` section of the spec. Endpoints are grouped in APIs. APIs are used in code generation and should bundle together related endpoints. The API name should be in [snake_case](https://en.wikipedia.org/wiki/Snake_case).
 
 ## Models
 

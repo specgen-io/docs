@@ -1,4 +1,4 @@
-# Endpoint
+# HTTP Endpoints
 
 Here's an example of endpoint definition:
 
