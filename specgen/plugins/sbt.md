@@ -1,4 +1,4 @@
-# Sbt Specgen Plugin
+# Sbt
 
 Spec scala code generation is packaged in form of SBT plugins. Add `sbt-spec` plugin library into your project using following line in your `plugins.sbt`:
 

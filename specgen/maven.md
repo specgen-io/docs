@@ -1,1 +1,0 @@
-# Maven Specgen Plugin
