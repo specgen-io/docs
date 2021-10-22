@@ -1,5 +1,9 @@
-# Code Generation Plugins
+# Plugins
 
-[Maven](https://docs.specgen.io/specgen/plugins/maven)
+{% content-ref url="maven.md" %}
+[maven.md](maven.md)
+{% endcontent-ref %}
 
-[sbt](https://docs.specgen.io/specgen/plugins/sbt)
+{% content-ref url="sbt.md" %}
+[sbt.md](sbt.md)
+{% endcontent-ref %}
