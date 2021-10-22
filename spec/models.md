@@ -8,10 +8,11 @@ Here's an example of object model definition:
 
 ```yaml
 Person:  # some information about person
-  first_name: string
-  middle_name: string?
-  last_name: string
-  year_of_birth: int  # in what year person was born
+  object:
+    first_name: string
+    middle_name: string?
+    last_name: string
+    year_of_birth: int  # in what year person was born
 ```
 
 The object model above represents the JSON object. Here's an example of such JSON object:
@@ -24,7 +25,7 @@ The object model above represents the JSON object. Here's an example of such JSO
 }
 ```
 
-Definition of `object` model is a dictionary where each item represents an object field. The key of the dictionary item as a field name and value a field type. 
+The `object` field is a dictionary where each item represents single field. The key of the dictionary item as a field name and value is a field type.
 
 The example above provides optional model descripton in the form of line comment `# some information about person`. This description is used for documentation purposes only.
 
@@ -37,7 +38,7 @@ Enum is represented in JSON as a string with limited set of possible values.
 Here's an example of enum model:
 
 ```yaml
-Model:   # count to three
+Count:   # count to three
   enum:
     first: ONE
     second: TWO
@@ -51,7 +52,7 @@ The `enum` field of the model definition defines enum items. Enum item name and 
 The enum items could be declared in a short form if each enum item name and item value are the same. Here's an example of enum declared in such short format:
 
 ```yaml
-Model:   # count to three
+Count:   # count to three
   enum:
     - first
     - second
