@@ -17,7 +17,7 @@ spec: 2                      #  Meta information
 name: example
 version: 1
 
-http:                        #  HTTP endpoints
+http:                        #  HTTP Endpoints
   sample:                    #  API
     get_sample:              #  Endpoint
       endpoint: GET /sample
@@ -50,8 +50,10 @@ Here's the list of supported meta information fields:
 
 ## HTTP Endpoints
 
-HTTP endpoints are defined in `http` section of the spec. Endpoints are grouped in APIs. APIs are used in code generation and should bundle together related endpoints. The API name should be in [snake_case](https://en.wikipedia.org/wiki/Snake_case).
+HTTP endpoints are defined in `http` section of the spec. Endpoints are grouped in APIs. APIs are used in code generation and should bundle together related endpoints. Read more about endpoints in the [HTTP Endpoints](http.md) section.
 
 ## Models
 
-Models section allows to define custom user types, including object models, enums, and oneOf unions. These user-defined models can be used in endpoints where needed by their names.
+Models are defined in `models` section of the spec. This section allows to define custom user types, including object models, enums, and tagged unions. These user-defined models can be used in endpoints where needed by their names.
+
+Read more about endpoints in the [Models](models.md) section.
