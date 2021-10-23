@@ -69,7 +69,7 @@ Both examples above provide optional model descripton (`# count to three`). This
 
 [Tagged union](https://en.wikipedia.org/wiki/Tagged_union) is a data structure used to hold a value that could take on several different, but fixed, types. Only one of the types can be in use at any one time, and a tag field explicitly indicates which one is in use. There are other names for tagged union. This documentation intentionally uses "tagged union" to emphasize role of the tag.
 
-There's no built-in support for tagged unions in JSON format. However there are two conventions for tagged unions representation: [tagged-union-wrapping-object](#) and [tagged-union-discriminator-field](#). These both conventions are supported by spec. 
+There's no built-in support for tagged unions in JSON format. However there are two conventions for tagged unions representation: [wrapping object](#tagged-union---wrapping-object) and [discriminator field](#tagged-union---discriminator-field). These both conventions are supported by spec. 
 
 ### Tagged Union - Wrapping Object
 
@@ -121,4 +121,4 @@ Pet:  # pet allowed to live in apartment
     puppy: Dog   # dogs are better
 ```
 
-The definition above differs from [wrapping object](#tagged-union-wrapping-object) by additional field `discriminator`. The value of `discriminator` field is the name of the `discriminator` field as it should appear in JSON. In the example above `case` is defined as `discriminator` field.
+The definition above differs from [wrapping object](#tagged-union---wrapping-object) by additional field `discriminator`. The value of `discriminator` field is the name of the `discriminator` field as it should appear in JSON. In the example above `case` is defined as `discriminator` field.
