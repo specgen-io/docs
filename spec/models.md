@@ -69,56 +69,64 @@ Both examples above provide optional model descripton (`# count to three`). This
 
 [Tagged union](https://en.wikipedia.org/wiki/Tagged_union) is a data structure used to hold a value that could take on several different, but fixed, types. Only one of the types can be in use at any one time, and a tag field explicitly indicates which one is in use. There are other names for tagged union. This documentation intentionally uses "tagged union" to emphasize role of the tag.
 
-There's no built-in support for tagged unions in JSON format. However there are two conventions for tagged unions representation: [wrapping object](#tagged-union---wrapping-object) and [discriminator field](#tagged-union---discriminator-field). These both conventions are supported by spec. 
+There's no built-in support for tagged unions in JSON format. However there are two conventions for tagged unions representation: [wrapping object](#wrapping-object) and [discriminator field](#discriminator-field). These both conventions are supported by spec. 
 
-### Tagged Union - Wrapping Object
+### Wrapping Object
 
-Let's imagine there's tagged union of two types: `kitten` of type `Cat` and `puppy` of type `Dog`.
+Let's imagine there's tagged union `Shape` of two types: `circle` of type `Circle` and `square` of type `Square`.
 Here's how it could be defined in the spec:
 
 ```yaml
-Pet:  # pet allowed to live in apartment
+Circle:
+  object:
+    radius: float
+
+Square:
+  object:
+    side: float
+
+Shape:  # simple shape type
   oneOf:
-    kitten: Cat
-    puppy: Dog   # dogs are better
+    circle: Circle
+    square: Square   # square shape
 ```
 
-In the example above `kitten` and `puppy` are tags and `Cat` and `Dog` are tags types. Object models definitions for `Cat` and `Dog` are omitted here. The `oneOf` field is a dictionary where each item represents single tag. The key of the dictionary item as a tag name and value is a tag type.
+In the example above `circle` and `square` are tags and `Circle` and `Square` are tags types. Object models definitions for `Circle` and `Square` are defined above as well and they are independent from tagged union definition. The `oneOf` field of `Shape` model is a dictionary where each item represents single tag. The key of the dictionary item as a tag name and value is a tag type.
 
 Here's how such tagged union would look like in JSON in wrapping object format:
 
 ```json
-{ "kitten": ...Cat... }
+{ "circle": { "radius": 3.5 } }
 
-{ "puppy": ...Dog... }
+{ "square": { "side": 4.2 } }
 ```
 
 In the example above tagged union wrapping object is an object with the single field, the name of the field is the name of the tag and value of the field corresponds to tag type.
 
-The example above provides optional model descripton in the form of line comment `# pet allowed to live in apartment`. This description is used for documentation purposes only.
+The example above provides optional model descripton in the form of line comment `# simple shape type`. This description is used for documentation purposes only.
 
-Each tag might have a description in the form of line comment, like `puppy` has the comment `# dogs are better` in the example above.
+Each tag might have a description in the form of line comment, like `square` tag has the comment `# square shape` in the example above.
 
-### Tagged Union - Discriminator Field
+### Discriminator Field
 
-The other possible representation of the tagged union in JSON is adding discriminator field to the object denoting the tag. Here's how it would look like for the `Pet` model:
+The other possible representation of the tagged union in JSON is adding discriminator field to the object denoting the tag. Here's how it would look like in JSON for the same `Shape` model:
 
 ```json
-{ "case": "kitten", ...Cat fields... }
+{ "kind": "circle", "radius": 3.5 }
 
-{ "case": "puppy", ...Dog fields... }
+{ "kind": "square", "side": 4.2 }
 ```
 
-Here's `case` is the discriminator field. It's value points to the union tag. Such discriminator field is added to the object representing tag value. This way of representation is limitted since discriminator field can be added only to some object hence tag type has to be object model type.
+The `kind` field is the discriminator field. It's value points to the union tag. Such discriminator field is added to the JSON object representing tag value. This way of representation is limitted since discriminator field can be added only to some object. Hence tag type has to be object model type.
 
 Here's how to make tagged union to be represented by object with discriminator field:
 
 ```yaml
-Pet:  # pet allowed to live in apartment
-  discriminator: case
+Shape:  # simple shape type
+  discriminator: kind
   oneOf:
-    kitten: Cat
-    puppy: Dog   # dogs are better
+    circle: Circle
+    square: Square   # square shape
 ```
 
-The definition above differs from [wrapping object](#tagged-union---wrapping-object) by additional field `discriminator`. The value of `discriminator` field is the name of the `discriminator` field as it should appear in JSON. In the example above `case` is defined as `discriminator` field.
+The definition above differs from [wrapping object](#wrapping-object) by additional field `discriminator`. The value of `discriminator` field is the name of the `discriminator` field as it should appear in JSON. In the example above `kind` is defined as `discriminator` field.
