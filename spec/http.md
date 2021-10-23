@@ -1,5 +1,53 @@
 # HTTP Endpoints
 
+Here's an example of HTTP endpoint definition:
+
+```yaml
+http:                        #  HTTP Endpoints
+  sample:                    #  API
+    get_sample:              #  Endpoint
+      endpoint: GET /sample
+      response:
+        ok: Sample
+```
+
+The `http` field of the spec is a dictionary where each item represents an [API](#api).
+
+# API
+
+API is a logical grouping of endpoints. This grouping is important for code generation as it allows to split code into logically separate files/classes.
+
+Each key in the `http` dictionary is a name of the API and value is a dictionary defining [endpoints](#endpoint) belonging to the API.
+
+Here's an example of two APIs `books` and `authors` with two endpoints in each.
+
+```yaml
+http:
+  books:                       # Books API
+    all_books:
+      endpoint: GET /books
+      response:
+        ok: Books
+    add_book:
+      endpoint: POST /books
+      body: Book
+      response:
+        ok: empty
+  authors:                     # Authors API
+    all_authors:
+      endpoint: GET /authors
+      response:
+        ok: Authors
+    add_author:
+      endpoint: POST /authors
+      body: Author
+      response:
+        ok: empty
+
+```
+
+# Endpoint
+
 Here's an example of endpoint definition:
 
 ```yaml
@@ -22,13 +70,13 @@ Here's information about endpoint definition fields:
 | Field | Required | Details |
 | :--- | :--- | :--- |
 | description | no | description, used for documentation |
-| [endpoint](#endpoint) | yes | HTTP method and endpoint URL |
+| [endpoint](#endpoint-field) | yes | HTTP method and endpoint URL |
 | [header](#header-parameters) | no | dictionary of HTTP header parameters and their types |
 | [query](#query-parameters) | no | dictionary of HTTP query parameters and their types |
 | [body](#request-body) | no for POST and PUT | HTTP body of the request |
 | [response](#response) | yes | dictionary of supported HTTP responses and response body |
 
-## Endpoint
+## Endpoint Field
 
 Endpoint defines HTTP method and URL to which service should respond.
 
