@@ -13,5 +13,8 @@
 
 * [Overview](specgen/overview.md)
 * [Plugins](specgen/plugins/README.md)
-  * [Sbt](specgen/plugins/sbt.md)
+  * [gradle](specgen/plugins/gradle.md)
   * [Maven](specgen/plugins/maven.md)
+  * [npm](specgen/plugins/npm.md)
+  * [Sbt](specgen/plugins/sbt.md)
+  * [RAKE](specgen/plugins/rake.md)
