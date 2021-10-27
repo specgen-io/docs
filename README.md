@@ -8,8 +8,8 @@ The documentation is split into following sections:
 
 ## spec
 
-Section [spec](#spec/format.md) describes spec format language and all aspects of it.
+Section [spec](spec/format.md) describes spec format language and all aspects of it.
 
 ## specgen
 
-Section [specgen](#specgen/overview.md) describes code generation features. It also includes documentation for all build plugins.
+Section [specgen](specgen/overview.md) describes code generation features. It also includes documentation for all build plugins.
