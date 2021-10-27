@@ -6,6 +6,10 @@ Specgen provides good quality code generation for HTTP service, client and model
 
 The documentation is split into following sections:
 
-[spec](#spec/format.md) describes spec format language
+## [spec](#spec/format.md)
 
-[specgen](#spec/format.md) describes code generation features
+Describes spec format language.
+
+## [specgen](#specgen/overview.md)
+
+Describes code generation features.
