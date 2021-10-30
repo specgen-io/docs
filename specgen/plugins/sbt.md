@@ -76,23 +76,23 @@ Here are `SpecSttp` settings that allow customization of code generation:
 | specFile | `spec.yaml` | Path to spec file relative to project folder |
 | specGeneratePath | `target/scala/src_managed/main/spec` | Path to generated code is placed |
 
-## Scala Models
+## Scala Models Circe
 
-Spec code generation can generate only (de)serializable to JSON models without any application specifics.
+Spec code generation can generate only (de)serializable to JSON [circe](#https://github.com/circe/circe) models without any application specifics.
 
-To enable models generation from spec enable `SpecModels` plugin in your `build.sbt`:
+To enable models generation from spec enable `SpecCirce` plugin in your `build.sbt`:
 
 ```text
 enablePlugins(SpecModels)
 ```
 
-Following dependencies are defined in `SpecModels` and should be added into `libraryDependencies`:
+Following dependencies are defined in `SpecCirce` and should be added into `libraryDependencies`:
 
 ```text
-libraryDependencies ++= specModelDependencies
+libraryDependencies ++= specCirceDependencies
 ```
 
-Here are `SpecModels` settings that allow customization of code generation:
+Here are `SpecCirce` settings that allow customization of code generation:
 
 | Setting | Default | Description |
 | :--- | :--- | :--- |
