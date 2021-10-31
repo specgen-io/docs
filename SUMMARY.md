@@ -12,7 +12,7 @@
 ## specgen
 
 * [Overview](specgen/overview.md)
-* [Command Line Tool](specgen/specgen.md)
+* [Specgen Tool](specgen/specgen.md)
 * [Plugins](specgen/plugins/README.md)
   * [gradle](specgen/plugins/gradle.md)
   * [Maven](specgen/plugins/maven.md)
