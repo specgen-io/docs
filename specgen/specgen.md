@@ -2,7 +2,7 @@
 
 Code generation based of service specification
 
-### Commands
+## Commands List
 * [client-go](#client-go)
 * [client-ruby](#client-ruby)
 * [client-scala-sttp](#client-scala-sttp)
@@ -27,7 +27,7 @@ Generate Go client source code
 specgen client-go [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -45,7 +45,7 @@ Generate Ruby client source code
 specgen client-ruby [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -62,7 +62,7 @@ Generate Scala Sttp client source code
 specgen client-scala-sttp [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -79,7 +79,7 @@ Generate TypeScript Axios client source code
 specgen client-ts-axios [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -97,7 +97,7 @@ Generate Go models source code
 specgen models-go [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -115,7 +115,7 @@ Generate Java models source code
 specgen models-java [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -133,7 +133,7 @@ Generate Ruby models source code
 specgen models-ruby [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -150,7 +150,7 @@ Generate Scala models source code
 specgen models-scala-circe [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -167,7 +167,7 @@ Generate TypeScript models
 specgen models-ts [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -185,7 +185,7 @@ Generate OpenAPI specification
 specgen openapi [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
   -h, --help               help for openapi
@@ -202,7 +202,7 @@ Generate Go service source code
 specgen service-go [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -222,7 +222,7 @@ Generate Spring Java service source code
 specgen service-java-spring [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -242,7 +242,7 @@ Generate Scala Play service source code
 specgen service-scala-play [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -261,7 +261,7 @@ Generate TypeScript Axios client source code
 specgen service-ts [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
       --generate-path string   Path to generate source code into
@@ -282,7 +282,7 @@ Format spec
 specgen spec-format [flags]
 ```
 
-### Options {.unlisted .unnumbered}
+**Options**
 
 ```
   -h, --help               help for spec-format
