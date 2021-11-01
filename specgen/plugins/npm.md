@@ -32,7 +32,7 @@ The example below generates [Express](https://expressjs.com/) server with [Super
 "specgen": "specgen service-ts --server express --validation superstruct --spec-file ./spec.yaml --generate-path ./src/spec --swagger-path ./docs/swagger.yaml --services-path ./src/services"
 ```
 
-Read [`service-ts`](specgen/specgen.md#service-ts) documentation for command details.
+Read [`service-ts`](../specgen.md#service-ts) documentation for command details.
 
 ## Koa Service
 
@@ -42,7 +42,7 @@ The example below generates [koa](https://koajs.com/) server with [io-ts](https:
 "specgen": "specgen service-ts --server koa --validation io-ts --spec-file ./spec.yaml --generate-path ./src/spec --swagger-path ./docs/swagger.yaml --services-path ./src/services"
 ```
 
-Read [`service-ts`](specgen/specgen.md#service-ts) documentation for command details.
+Read [`service-ts`](../specgen.md#service-ts) documentation for command details.
 
 ## Axios Client
 
@@ -53,7 +53,7 @@ The example below generates [Axios](https://axios-http.com/docs/intro) HTTP clie
 "specgen": "specgen client-ts-axios --validation superstruct --spec-file ./spec.yaml --generate-path ./src/spec"
 ```
 
-Read [`client-ts-axios`](specgen/specgen.md#client-ts-axios) documentation for command details.
+Read [`client-ts-axios`](../specgen.md#client-ts-axios) documentation for command details.
 
 ## Superstruct Models
 
@@ -63,7 +63,7 @@ The example below generates [Superstruct](https://docs.superstructjs.org/) model
 "specgen": "specgen models-ts --validation superstruct --spec-file ./spec.yaml --generate-path ./src/spec"
 ```
 
-Read [`models-ts`](specgen/specgen.md#models-ts) documentation for command details.
+Read [`models-ts`](../specgen.md#models-ts) documentation for command details.
 
 ## io-ts Models
 
@@ -73,4 +73,4 @@ The example below generates [io-ts](https://github.com/gcanti/io-ts) models from
 "specgen": "specgen models-ts --validation io-ts --spec-file ./spec.yaml --generate-path ./src/spec"
 ```
 
-Read [`models-ts`](specgen/specgen.md#models-ts) documentation for command details.
+Read [`models-ts`](../specgen.md#models-ts) documentation for command details.
