@@ -14,7 +14,13 @@ Add the following [script](https://docs.npmjs.com/cli/v7/using-npm/scripts) to `
 "specgen": "specgen <command>  <args>"
 ```
 
-In this `specgen` script `<command>` stands for specific [specgen tool](specgen/specgen.md) command. Here are commands that generate TypeScript code: [`service-ts`](specgen/specgen.md#service-ts), [`client-ts-axios`](specgen/specgen.md#client-ts-axios), [`models-ts`](specgen/specgen.md#models-ts).
+In this `specgen` script `<command>` stands for specific [specgen tool](../specgen.md) command. Here are commands that generate TypeScript code: [`service-ts`](../specgen.md#service-ts), [`client-ts-axios`](../specgen.md#client-ts-axios), [`models-ts`](../specgen.md#models-ts).
+
+To run code generation execute `specgen` script:
+
+```shell
+% npm run specgen
+```
 
 This page provides some examples of specgen scripts configuration.
 
