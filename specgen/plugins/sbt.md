@@ -33,12 +33,12 @@ Specgen plugin generates router that should be pluged into `conf/routes`:
 
 Here are `SpecPlay` settings that allow customization of code generation:
 
-| Setting | Default | Description |
-| :--- | :--- | :--- |
-| specFile | `spec.yaml` | Path to service specification file; relative to project folder |
-| specSwagger | `public/swagger.yaml` | Path to generated OpenAPI/Swagger specification file |
+| Setting          | Default                              | Description |
+| :--------------- | :----------------------------------- | :---------- |
+| specFile         | `spec.yaml`                          | Path to service specification file; relative to project folder |
+| specSwagger      | `public/swagger.yaml`                | Path to generated OpenAPI/Swagger specification file |
 | specGeneratePath | `target/scala/src_managed/main/spec` | Path to generate source code into |
-| specServicesPath | `app/services` | Path to scaffolded services files; these services are scaffolded only if they do not exist |
+| specServicesPath | `app/services`                       | Path to scaffolded services files; these services are scaffolded only if they do not exist |
 
 Default settings are aligned with the standard [Play application layout](https://www.playframework.com/documentation/2.7.x/Anatomy).
 
@@ -71,9 +71,9 @@ libraryDependencies ++= specSttpDependencies
 
 Here are `SpecSttp` settings that allow customization of code generation:
 
-| Setting | Default | Description |
-| :--- | :--- | :--- |
-| specFile | `spec.yaml` | Path to spec file relative to project folder |
+| Setting          | Default                              | Description |
+| :--------------- | :----------------------------------- | :---------- |
+| specFile         | `spec.yaml`                          | Path to spec file relative to project folder |
 | specGeneratePath | `target/scala/src_managed/main/spec` | Path to generated code is placed |
 
 ## Models Circe
@@ -94,9 +94,9 @@ libraryDependencies ++= specCirceDependencies
 
 Here are `SpecCirce` settings that allow customization of code generation:
 
-| Setting | Default | Description |
-| :--- | :--- | :--- |
-| specFile | `spec.yaml` | Path to spec file relative to project folder |
+| Setting          | Default                              | Description |
+| :--------------- | :----------------------------------- | :---------- |
+| specFile         | `spec.yaml`                          | Path to spec file relative to project folder |
 | specGeneratePath | `target/scala/src_managed/main/spec` | Path to generated code is placed |
 
 ## Under the Hood
