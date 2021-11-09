@@ -7,7 +7,8 @@ Models section of the spec allows to define custom types. It supports [object ty
 Here's an example of object model definition:
 
 ```yaml
-Person:  # some information about person
+Person:
+  description: some information about person
   object:
     first_name: string
     middle_name: string?
@@ -27,7 +28,7 @@ The object model above represents the JSON object. Here's an example of such JSO
 
 The `object` field is a dictionary where each item represents single field. The key of the dictionary item as a field name and value is a field type.
 
-The example above provides optional model descripton in the form of line comment `# some information about person`. This description is used for documentation purposes only.
+The example above provides optional model `descripton` field with value `some information about person`. This description is used for documentation purposes only.
 
 Each field might have a description in the form of line comment, like `year_of_birth` has the comment `# in what year person was born` in the example above.
 
@@ -38,11 +39,12 @@ Enum is represented in JSON as a string with limited set of possible values.
 Here's an example of enum model:
 
 ```yaml
-Count:   # count to three
+Count:
+  description: count to three
   enum:
     first: ONE
     second: TWO
-    third: THREE
+    third: THREE  # third enum item
 ```
 
 The enum model above represents enumeration of following JSON values: `"ONE"`, `"TWO"`, `"THREE"`.
@@ -52,18 +54,21 @@ The `enum` field of the model definition defines enum items. Enum item name and 
 The enum items could be declared in a short form if each enum item name and item value are the same. Here's an example of enum declared in such short format:
 
 ```yaml
-Count:   # count to three
+Count:
+  description: count to three
   enum:
     - first
     - second
-    - third
+    - third   # third enum item
 ```
 
 The enum model above represents enumeration of following JSON values: `"first"`, `"second"`, `"third"`.
 
 In this format `enum` field is an array of string values. Each string value is enum item name and item JSON value at the same time.
 
-Both examples above provide optional model descripton (`# count to three`). This description is used for documentation purposes only.
+Both examples above provide optional model `description` field with value `count to three`. This description is used for documentation purposes only.
+
+Each field might have a description in the form of line comment, like item `third` has the comment `# third enum item` in the both examples above.
 
 ## Tagged Union
 
@@ -85,7 +90,8 @@ Square:
   object:
     side: float
 
-Shape:  # simple shape type
+Shape:
+  description: simple shape type
   oneOf:
     circle: Circle
     square: Square   # square shape
@@ -103,7 +109,7 @@ Here's how such tagged union would look like in JSON in wrapping object format:
 
 In the example above tagged union wrapping object is an object with the single field, the name of the field is the name of the tag and value of the field corresponds to tag type.
 
-The example above provides optional model descripton in the form of line comment `# simple shape type`. This description is used for documentation purposes only.
+The example above provides optional model `descripton` field with value `simple shape type`. This description is used for documentation purposes only.
 
 Each tag might have a description in the form of line comment, like `square` tag has the comment `# square shape` in the example above.
 
@@ -122,7 +128,8 @@ The `kind` field is the discriminator field. It's value points to the union tag.
 Here's how to make tagged union to be represented by object with discriminator field:
 
 ```yaml
-Shape:  # simple shape type
+Shape:
+  description: simple shape type
   discriminator: kind
   oneOf:
     circle: Circle

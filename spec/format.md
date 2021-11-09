@@ -13,7 +13,7 @@ Spec format is based on YAML. Each spec file is a YAML file. In many aspects spe
 Here's an example of simplest spec:
 
 ```yaml
-spec: 2                      #  Meta information
+spec: 2.1                    #  Meta information
 name: example
 version: 1
 
@@ -26,8 +26,9 @@ http:                        #  HTTP Endpoints
 
 models:                      #  Models
   Sample:                    #  Model name
-    field1: string
-    field2: int
+    object:                  #  This model is object model
+      field1: string
+      field2: int
 ```
 
 Spec YAML file consists of following sections:
@@ -42,11 +43,11 @@ Meta information is presented in form for keys at the top level of the YAML file
 
 Here's the list of supported meta information fields:
 
-| Name | Description |
-| :--- | :--- |
-| spec | Version of spec format |
-| name | Name of the specification, should be in [kebab-case](http://wiki.c2.com/?KebabCase) |
-| version | Version of the specification |
+| Name    | Description                                          |
+| :------ | :--------------------------------------------------- |
+| spec    | Version of spec format, current latest format is 2.1 |
+| name    | Name of the specification                            |
+| version | Version of the specification                         |
 
 ## HTTP Endpoints
 
