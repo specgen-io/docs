@@ -8,7 +8,7 @@ Here is list of specgen plugins:
 
 [Maven](maven.md)
 
-[npm](npm.md)
+[npm](plugin-npm.md)
 
 [RAKE](rake.md)
 
