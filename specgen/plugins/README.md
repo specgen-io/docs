@@ -4,12 +4,12 @@ All specgen code generation plugins rely on specgen command line tool. specgen b
 
 Here is list of specgen plugins:
 
-[gradle](gradle.md)
+[gradle](plugin-gradle.md)
 
-[Maven](maven.md)
+[Maven](plugin-maven.md)
 
 [npm](plugin-npm.md)
 
-[RAKE](rake.md)
+[RAKE](plugin-rake.md)
 
-[Sbt](sbt.md)
+[Sbt](plugin-sbt.md)
