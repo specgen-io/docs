@@ -3,7 +3,6 @@
 Code generation based on specification
 
 ## Commands List
-
 * [client-go](#client-go)
 * [client-java](#client-java)
 * [client-kotlin](#client-kotlin)
@@ -24,6 +23,7 @@ Code generation based on specification
 * [spec-convert](#spec-convert)
 * [spec-format](#spec-format)
 
+
 ## client-go
 
 Generate Go client source code
@@ -33,14 +33,16 @@ specgen client-go [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --module-name   | yes      |         | module name                        |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for client-go                 |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--module-name` - Module name.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for client-go.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## client-java
@@ -52,14 +54,16 @@ specgen client-java [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --package-name  | yes      |         | package name                       |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for client-java               |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--package-name` - Package name.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for client-java.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## client-kotlin
@@ -71,14 +75,16 @@ specgen client-kotlin [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --package-name  | yes      |         | package name                       |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for client-kotlin             |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--package-name` - Package name.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for client-kotlin.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## client-ruby
@@ -90,13 +96,14 @@ specgen client-ruby [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for client-ruby               |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for client-ruby.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## client-scala
@@ -108,13 +115,14 @@ specgen client-scala [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for client-scala              |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for client-scala.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## client-ts
@@ -126,15 +134,18 @@ specgen client-ts [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                                  |
-|  :---- | :-------------- | :------: | :------ | :----------------------------------------------------------  |
-|        | --client        | no       |         | client TypeScript library: axios, node-fetch, browser-fetch  |
-|        | --generate-path | yes      |         | path to generate source code into                            |
-|        | --spec-file     | yes      |         | path to specification file                                   |
-|        | --validation    | no       |         | validation TypeScript library: superstruct, io-ts            |
-|  -h    | --help          | no       | false   | help for client-ts                                           |
-|  -v    | --verbose       | no       | false   | verbose output                                               |
+* `--client` - Client TypeScript library: axios, node-fetch, browser-fetch.
+     Not required.
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--validation` - Validation TypeScript library: superstruct, io-ts.
+     Not required.
+* `--help`, `-h` - Help for client-ts.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-go
@@ -146,14 +157,16 @@ specgen models-go [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --module-name   | yes      |         | module name                        |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for models-go                 |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--module-name` - Module name.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for models-go.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-java
@@ -165,14 +178,16 @@ specgen models-java [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --package-name  | no       |         | package name                       |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for models-java               |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--package-name` - Package name.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for models-java.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-kotlin
@@ -184,15 +199,18 @@ specgen models-kotlin [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --jsonlib       | no       | jackson | Kotlin JSON library: jackson       |
-|        | --package-name  | no       |         | package name                       |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for models-kotlin             |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--jsonlib` - Kotlin JSON library: jackson.
+     Not required. Default value: `jackson`.
+* `--package-name` - Package name.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for models-kotlin.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-ruby
@@ -204,13 +222,14 @@ specgen models-ruby [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for models-ruby               |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for models-ruby.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-scala
@@ -222,13 +241,14 @@ specgen models-scala [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                        |
-|  :---- | :-------------- | :------: | :------ | :--------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into  |
-|        | --spec-file     | yes      |         | path to specification file         |
-|  -h    | --help          | no       | false   | help for models-scala              |
-|  -v    | --verbose       | no       | false   | verbose output                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for models-scala.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## models-ts
@@ -240,14 +260,16 @@ specgen models-ts [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                        |
-|  :---- | :-------------- | :------: | :------ | :------------------------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into                  |
-|        | --spec-file     | yes      |         | path to specification file                         |
-|        | --validation    | no       |         | validation TypeScript library: superstruct, io-ts  |
-|  -h    | --help          | no       | false   | help for models-ts                                 |
-|  -v    | --verbose       | no       | false   | verbose output                                     |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--validation` - Validation TypeScript library: superstruct, io-ts.
+     Not required.
+* `--help`, `-h` - Help for models-ts.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## openapi
@@ -259,13 +281,14 @@ specgen openapi [flags]
 ```
 
 **Flags**
-
-|  Short | Long        | Required | Default | Description                 |
-|  :---- | :---------- | :------: | :------ | :-------------------------  |
-|        | --out-file  | yes      |         | path to output file         |
-|        | --spec-file | yes      |         | path to specification file  |
-|  -h    | --help      | no       | false   | help for openapi            |
-|  -v    | --verbose   | no       | false   | verbose output              |
+* `--out-file` - Path to output file.
+     Required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for openapi.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## service-go
@@ -277,16 +300,20 @@ specgen service-go [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                             |
-|  :---- | :-------------- | :------: | :------ | :-----------------------------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into                       |
-|        | --module-name   | yes      |         | module name                                             |
-|        | --services-path | no       |         | path to scaffold services code                          |
-|        | --spec-file     | yes      |         | path to specification file                              |
-|        | --swagger-path  | no       |         | path of generated OpenAPI (Swagger) specification file  |
-|  -h    | --help          | no       | false   | help for service-go                                     |
-|  -v    | --verbose       | no       | false   | verbose output                                          |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--module-name` - Module name.
+     Required.
+* `--services-path` - Path to scaffold services code.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--swagger-path` - Path of generated OpenAPI (Swagger) specification file.
+     Not required.
+* `--help`, `-h` - Help for service-go.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## service-java
@@ -298,16 +325,20 @@ specgen service-java [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                             |
-|  :---- | :-------------- | :------: | :------ | :-----------------------------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into                       |
-|        | --package-name  | no       |         | package name                                            |
-|        | --services-path | no       |         | path to scaffold services code                          |
-|        | --spec-file     | yes      |         | path to specification file                              |
-|        | --swagger-path  | no       |         | path of generated OpenAPI (Swagger) specification file  |
-|  -h    | --help          | no       | false   | help for service-java                                   |
-|  -v    | --verbose       | no       | false   | verbose output                                          |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--package-name` - Package name.
+     Not required.
+* `--services-path` - Path to scaffold services code.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--swagger-path` - Path of generated OpenAPI (Swagger) specification file.
+     Not required.
+* `--help`, `-h` - Help for service-java.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## service-scala
@@ -319,15 +350,18 @@ specgen service-scala [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                             |
-|  :---- | :-------------- | :------: | :------ | :-----------------------------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into                       |
-|        | --services-path | no       |         | path to scaffold services code                          |
-|        | --spec-file     | yes      |         | path to specification file                              |
-|        | --swagger-path  | no       |         | path of generated OpenAPI (Swagger) specification file  |
-|  -h    | --help          | no       | false   | help for service-scala                                  |
-|  -v    | --verbose       | no       | false   | verbose output                                          |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--services-path` - Path to scaffold services code.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--swagger-path` - Path of generated OpenAPI (Swagger) specification file.
+     Not required.
+* `--help`, `-h` - Help for service-scala.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## service-ts
@@ -339,17 +373,22 @@ specgen service-ts [flags]
 ```
 
 **Flags**
-
-|  Short | Long            | Required | Default | Description                                             |
-|  :---- | :-------------- | :------: | :------ | :-----------------------------------------------------  |
-|        | --generate-path | yes      |         | path to generate source code into                       |
-|        | --server        | yes      |         | server TypeScript library: express, koa                 |
-|        | --services-path | no       |         | path to scaffold services code                          |
-|        | --spec-file     | yes      |         | path to specification file                              |
-|        | --swagger-path  | no       |         | path of generated OpenAPI (Swagger) specification file  |
-|        | --validation    | yes      |         | validation TypeScript library: superstruct, io-ts       |
-|  -h    | --help          | no       | false   | help for service-ts                                     |
-|  -v    | --verbose       | no       | false   | verbose output                                          |
+* `--generate-path` - Path to generate source code into.
+     Required.
+* `--server` - Server TypeScript library: express, koa.
+     Required.
+* `--services-path` - Path to scaffold services code.
+     Not required.
+* `--spec-file` - Path to specification file.
+     Required.
+* `--swagger-path` - Path of generated OpenAPI (Swagger) specification file.
+     Not required.
+* `--validation` - Validation TypeScript library: superstruct, io-ts.
+     Required.
+* `--help`, `-h` - Help for service-ts.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## spec-convert
@@ -361,14 +400,16 @@ specgen spec-convert [flags]
 ```
 
 **Flags**
-
-|  Short | Long       | Required | Default   | Description                                                            |
-|  :---- | :--------- | :------: | :-------- | :--------------------------------------------------------------------  |
-|        | --format   | yes      |           | specification format to convert specification from: spec-2.0, openapi  |
-|        | --in-file  | yes      |           | path for input specification file                                      |
-|        | --out-file | no       | spec.yaml | path to output file                                                    |
-|  -h    | --help     | no       | false     | help for spec-convert                                                  |
-|  -v    | --verbose  | no       | false     | verbose output                                                         |
+* `--format` - Specification format to convert specification from: spec-2.0, openapi.
+     Required.
+* `--in-file` - Path for input specification file.
+     Required.
+* `--out-file` - Path to output file.
+     Not required. Default value: `spec.yaml`.
+* `--help`, `-h` - Help for spec-convert.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
 
 ## spec-format
@@ -380,9 +421,10 @@ specgen spec-format [flags]
 ```
 
 **Flags**
+* `--spec-file` - Path to specification file.
+     Required.
+* `--help`, `-h` - Help for spec-format.
+     Not required. Default value: `false`.
+* `--verbose`, `-v` - Verbose output.
+     Not required. Default value: `false`.
 
-|  Short | Long        | Required | Default | Description                 |
-|  :---- | :---------- | :------: | :------ | :-------------------------  |
-|        | --spec-file | yes      |         | path to specification file  |
-|  -h    | --help      | no       | false   | help for spec-format        |
-|  -v    | --verbose   | no       | false   | verbose output              |
