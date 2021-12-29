@@ -14,7 +14,7 @@ Add the following [script](https://docs.npmjs.com/cli/v7/using-npm/scripts) to `
 "specgen": "specgen <command>  <args>"
 ```
 
-In this `specgen` script `<command>` stands for specific [specgen tool](../specgen.md) command. Here are commands that generate TypeScript code: [`service-ts`](../specgen.md#service-ts), [`client-ts-axios`](../specgen.md#client-ts-axios), [`models-ts`](../specgen.md#models-ts).
+In this `specgen` script `<command>` stands for specific [specgen tool](../specgen.md) command. Here are commands that generate TypeScript code: [`service-ts`](../specgen.md#service-ts), [`client-ts`](../specgen.md#client-ts), [`models-ts`](../specgen.md#models-ts).
 
 To run code generation execute `specgen` script:
 
@@ -50,10 +50,10 @@ The example below generates [Axios](https://axios-http.com/docs/intro) HTTP clie
 
 
 ```json
-"specgen": "specgen client-ts-axios --validation superstruct --spec-file ./spec.yaml --generate-path ./src/spec"
+"specgen": "specgen client-ts --client axios --validation superstruct --spec-file ./spec.yaml --generate-path ./src/spec"
 ```
 
-Read [`client-ts-axios`](../specgen.md#client-ts-axios) documentation for command details.
+Read [`client-ts`](../specgen.md#client-ts) documentation for command details.
 
 ## Superstruct Models
 
