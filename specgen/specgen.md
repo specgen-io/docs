@@ -1,6 +1,6 @@
-# specgen
+# Specgen Reference
 
-Code generation based on specification
+Code generation based on specification. This is command line reference documentation.
 
 ## Commands List
 * [client-go](#client-go)
